@@ -9,6 +9,7 @@ const {
 } = require("express-validator");
 require("dotenv").config();
 
+app.use(compression());
 app.use("/static", express.static("public"));
 app.use(express.static(path.join(__dirname, "build")));
 app.use(express.json());
