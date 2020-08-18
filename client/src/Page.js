@@ -62,7 +62,7 @@ function Page() {
   const sendmail = (e) => {
     e.preventDefault();
     axios
-      .post("https://danousis.com/send-email", {
+      .post("/send-email", {
         name: e.target[0].value,
         email: e.target[1].value,
         message: e.target[2].value,

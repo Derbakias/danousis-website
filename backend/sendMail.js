@@ -14,7 +14,7 @@ const mailSend = (req, res, next) => {
   const mailOptions = {
     from: email,
     to: process.env.STMP_EMAIL,
-    subject: "You have an email from" + name,
+    subject: "You have an email from Danousis Website",
     text: message,
   };
   transport
