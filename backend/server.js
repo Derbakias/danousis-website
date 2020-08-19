@@ -10,7 +10,6 @@ const {
 require("dotenv").config();
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "build")));
 
 app.get("/api/cv", (req, res) => {
   const pdfFile = "/files/danousis_CV.pdf";
