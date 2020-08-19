@@ -62,7 +62,7 @@ function Page() {
   const sendmail = (e) => {
     e.preventDefault();
     axios
-      .post("/send-email", {
+      .post("/api/send-email", {
         name: e.target[0].value,
         email: e.target[1].value,
         message: e.target[2].value,
@@ -283,10 +283,7 @@ function Page() {
               <p>Illustrator</p>
             </div>
           </div>
-          <a
-            className="cv-btn"
-            href="https://danousis.com/get-cv"
-          >
+          <a className="cv-btn" href="/api/cv">
             Get My CV!
           </a>
         </div>

@@ -9,32 +9,27 @@ const {
 } = require("express-validator");
 require("dotenv").config();
 
-// app.use(compression());
-app.use("/static", express.static("public"));
-app.use(express.static(path.join(__dirname, "build")));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "build")));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-
-app.get("/get-cv", (req, res) => {
-  const pdfFile = __dirname + "/files/danousis_CV.pdf";
-  console.log(pdfFile);
-  if (!fs.existsSync(pdfFile)) {
-    res.send("File is removed!");
-  } else {
-    res.download(pdfFile);
-  }
+app.get("/api/cv", (req, res) => {
+  const pdfFile = "/files/danousis_CV.pdf";
+  fs.exists(pdfFile, (err) => {
+    if (err) {
+      res.send("File is removed!");
+    } else {
+      res.download(__dirname + pdfFile);
+    }
+  });
 });
 
 app.post(
-  "/send-email",
+  "/api/send-email",
   [
     check("name", "Full name is required")
       .isLength({
         min: 3,
-        max: 30,
+        max: 60,
       })
       .trim()
       .escape(),
@@ -43,7 +38,7 @@ app.post(
       .isString()
       .isLength({
         min: 3,
-        max: 300,
+        max: 1000,
       })
       .trim()
       .escape(),
@@ -64,7 +59,7 @@ app.post(
   }
 );
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 app.listen(PORT, () =>
   console.log("Listening on port " + PORT)
