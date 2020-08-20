@@ -14,7 +14,7 @@ function Page() {
       tech:
         "Node.js, Express, JWT, React.js, Router, Animations ",
       link:
-        "https://drive.google.com/file/d/1nhkDyA52qcpC3d0OhMtioze549GsSKG0/view?usp=sharing",
+        "https://www.linkedin.com/posts/dimitrios-danousis_codinglife-fullstack-fullstackdev-activity-6699305152035241984-djjq",
     },
     {
       title: "Barup",
@@ -210,15 +210,14 @@ function Page() {
           <h3>About Me</h3>
           <img src={aboutShape} alt="box shapes" />
           <p>
-            I'm a front-end developer based in London, UK.
-            I'm very passionate with creative hobbies since
-            I was very young. I love playing with music,
-            technology and in general I love to discover a
-            lot of new gadget stuff! My work currently
-            consists of several front-end projects. Recently
-            I started experimenting with full stack
-            development. I have worked with several tools
-            and libraries to solve a variety of problems.
+            A freelance front-end developer based in London,
+            UK. Being passionate with creative activities
+            since a very young age. Love playing with music,
+            technology and discover new gadgets! My work
+            currently consists of several projects. Very
+            recently I started experimenting with full stack
+            development. I have used several tools and
+            libraries to solve a variety of problems.
           </p>
         </div>
       </section>

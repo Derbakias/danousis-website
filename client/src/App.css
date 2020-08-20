@@ -39,11 +39,6 @@ a {
   margin: 0 auto;
 }
 
-/* fix the navbar overlapping */
-html {
-  scroll-padding-top: 75px;
-}
-
 /* Navbar style */
 nav {
   position: fixed;
@@ -332,12 +327,17 @@ nav {
 
 /* Contact */
 .contact {
-  min-height: 50vh;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
   padding: 2rem 0;
   background: var(--bg-dark);
 }
 
 .contact-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -438,10 +438,6 @@ nav {
 }
 
 @media (max-width: 600px) {
-  /* fix the navbar overlapping */
-  html {
-    scroll-padding-top: 250px;
-  }
   nav {
     opacity: 0.95;
   }
@@ -496,6 +492,7 @@ nav {
   .about-wrapper p {
     width: 60%;
     font-size: 0.8rem;
+    text-align: start;
   }
   .contact-container {
     width: 100%;
@@ -548,7 +545,7 @@ nav {
 
   .about-wrapper p {
     width: 70%;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 
   .projects-wrapper,
@@ -567,6 +564,6 @@ nav {
 
   .project p,
   .text-column p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }

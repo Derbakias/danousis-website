@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Navbar() {
   const [dropDown, setDropDown] = useState(false);
@@ -13,6 +14,11 @@ function Navbar() {
   const changeDropDown = (e) => {
     setDropDown((prev) => !prev);
   };
+
+  let offsetValue = 75;
+  if (window.innerWidth <= 600) {
+    offsetValue = 250;
+  }
   return (
     <nav>
       <div className="navbar-wrapper container">
@@ -23,16 +29,33 @@ function Navbar() {
         </div>
         <ul className={ulClass}>
           <li className="link">
-            <a href="#about-me">About Me</a>
+            <AnchorLink
+              offset={offsetValue}
+              href="#about-me"
+            >
+              About Me
+            </AnchorLink>
           </li>
           <li className="link">
-            <a href="#skills">Skills</a>
+            <AnchorLink offset={offsetValue} href="#skills">
+              Skills
+            </AnchorLink>
           </li>
           <li className="link">
-            <a href="#projects">Projects</a>
+            <AnchorLink
+              offset={offsetValue}
+              href="#projects"
+            >
+              Projects
+            </AnchorLink>
           </li>
           <li className="link">
-            <a href="#contact">Contact</a>
+            <AnchorLink
+              offset={offsetValue}
+              href="#contact"
+            >
+              Contact
+            </AnchorLink>
           </li>
         </ul>
         {dropDown ? (
