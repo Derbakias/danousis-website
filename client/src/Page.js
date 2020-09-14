@@ -13,8 +13,7 @@ function Page() {
         "Full stack app to create blog posts with the ability to choose either private or public post.",
       tech:
         "Node.js, Express, JWT, React.js, Router, Animations ",
-      link:
-        "https://www.linkedin.com/posts/dimitrios-danousis_codinglife-fullstack-fullstackdev-activity-6699305152035241984-djjq",
+      link: "https://danousis.com/blogify/",
     },
     {
       title: "Barup",
